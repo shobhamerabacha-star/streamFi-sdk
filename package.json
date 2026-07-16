@@ -28,9 +28,9 @@
     "src"
   ],
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && rollup -c rollup.config.mjs",
+    "build": "node init && tsc -p tsconfig.build.json && rollup -c rollup.config.mjs",
     "prepublishOnly": "npm run build",
-    "dev": "tsc -p tsconfig.build.json --watch",
+    "dev": "node init && tsc -p tsconfig.build.json --watch",
     "test": "vitest run",
     "test:watch": "vitest",
     "typecheck": "tsc --noEmit",
